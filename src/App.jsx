@@ -533,7 +533,7 @@ const About = () => (
 
       {/* Left — Photo placeholder + credentials strip */}
       <div className="reveal">
-        {/* Photo placeholder */}
+        {/* Photo */}
         <div style={{
           width: "100%",
           paddingBottom: "130%",
@@ -543,40 +543,18 @@ const About = () => (
           marginBottom: "32px",
           overflow: "hidden",
         }}>
-          {/* Placeholder content */}
-          <div style={{
-            position: "absolute", inset: 0,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "16px",
-          }}>
-            {/* Monogram */}
-            <div style={{
-              width: "80px", height: "80px",
-              border: "1px solid rgba(184,149,42,0.3)",
-              display: "flex", alignItems: "center", justifyContent: "center",
-            }}>
-              <span style={{
-                fontFamily: "var(--serif)",
-                fontSize: "2.5rem",
-                fontWeight: 300,
-                color: "rgba(184,149,42,0.4)",
-              }}>S</span>
-            </div>
-            <div style={{
-              fontFamily: "var(--mono)",
-              fontSize: "9px",
-              letterSpacing: "0.25em",
-              color: "var(--muted)",
-              textTransform: "uppercase",
-              textAlign: "center",
-              lineHeight: 2,
-            }}>
-              Professional<br />Portrait<br />Placeholder
-            </div>
-          </div>
+          <img
+            src="/profile.jpg"
+            alt="Dr. Shaan Sherif"
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center top",
+            }}
+          />
 
           {/* Corner accents */}
           {[["0","0","top","left"],["0","0","top","right"],["0","0","bottom","left"],["0","0","bottom","right"]].map(([t,r,pos1,pos2],i) => {
